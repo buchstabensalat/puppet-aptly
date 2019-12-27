@@ -22,7 +22,7 @@ define aptly::mirror (
     $with_sources,
     $with_udebs
   )
-  validate_re($location, ['\Ahttps?:\/\/', '\Aftp:\/\/', '\A\/\w+'])
+  validate_re($location, ['\Ahttps?:\/\/', '\Aftp:\/\/', '\Arsync:\/\/', '\A\/\w+'])
 
   aptly_mirror { $name:
     ensure        => $ensure,
